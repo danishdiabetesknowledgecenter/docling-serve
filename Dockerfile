@@ -5,15 +5,15 @@
 # CPU-only image is quicker and more reliable.
 FROM quay.io/docling-project/docling-serve-cpu:v1.39.0
 
-ENV PORT=5001 \
+ENV PORT=8080 \
     DOCLING_SERVE_ENABLE_UI=false \
     UVICORN_HOST=0.0.0.0 \
-    UVICORN_PORT=5001 \
+    UVICORN_PORT=8080 \
     UVICORN_WORKERS=1 \
     DOCLING_SERVE_ENG_LOC_NUM_WORKERS=2 \
     DOCLING_SERVE_MAX_SYNC_WAIT=600 \
     OMP_NUM_THREADS=4
 
-EXPOSE 5001
+EXPOSE 8080
 
 CMD ["docling-serve", "run"]
