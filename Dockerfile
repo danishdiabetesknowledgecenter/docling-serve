@@ -5,7 +5,8 @@
 # CPU-only image is quicker and more reliable.
 FROM quay.io/docling-project/docling-serve-cpu:v1.39.0
 
-ENV DOCLING_SERVE_ENABLE_UI=false \
+ENV PORT=5001 \
+    DOCLING_SERVE_ENABLE_UI=false \
     UVICORN_HOST=0.0.0.0 \
     UVICORN_PORT=5001 \
     UVICORN_WORKERS=1 \
